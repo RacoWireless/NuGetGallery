@@ -1,1 +1,1 @@
-﻿<div class="banner-warning">This is a development environment. No data will be preserved.</div>
+﻿<!--<div class="banner-warning">This is a development environment. No data will be preserved.</div>-->
