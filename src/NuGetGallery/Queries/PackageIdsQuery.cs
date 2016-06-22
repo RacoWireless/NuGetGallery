@@ -16,7 +16,7 @@ namespace NuGetGallery
 
     public class PackageIdsQuery : IPackageIdsQuery
     {
-        private const string PartialIdSqlFormat = @"SELECT TOP 30 pr.ID
+        private const string PartialIdSqlFormat = @"SELECT pr.ID
 FROM Packages p
     JOIN PackageRegistrations pr on pr.[Key] = p.PackageRegistrationKey
 WHERE pr.ID LIKE {{0}}
@@ -24,7 +24,7 @@ WHERE pr.ID LIKE {{0}}
 GROUP BY pr.ID
 ORDER BY pr.ID";
 
-        private const string NoPartialIdSql = @"SELECT TOP 30 pr.ID
+        private const string NoPartialIdSql = @"SELECT pr.ID
 FROM Packages p
     JOIN PackageRegistrations pr on pr.[Key] = p.PackageRegistrationKey
 GROUP BY pr.ID
